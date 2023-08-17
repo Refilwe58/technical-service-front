@@ -1,0 +1,145 @@
+<div class="">
+    <!-- <body class="container"> -->
+        <div class="log d-flex justify-content-end">
+            <nav class="header">
+                <div id="logoDiv">
+                    <a>
+                     
+                        <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                            style="float: left;height: 70px;width: 225px;" routerLink="read">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li>
+        
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn-success">LOGOUT</button></a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+</div>
+
+<body>
+    <div class="container2 d-flex justify-content-between">
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+                    <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/adminpage">View Logs</a></li>
+                    <li class="breadcrumb-item active" id="breadcrumbpaddingreport"><a class="" disabled>Generate Report</a></li>
+                    
+                   
+                    
+                        
+                        
+                </ul>
+            </nav>
+        </div>
+
+        <!-- <div class="container ">
+            <h1 class="reqhead1 d-flex justify-content-center" style="background-color: rgb(182, 179, 179);">Admin Report</h1>
+            <div class="searchDiv">
+                <div class="Search-container">
+                    <mat-form-field appearance="fill">
+                        <input matInput placeholder="search" autocomplete="off" (keyup)="filterData($event)">
+                    </mat-form-field>
+    
+                </div>
+                <div>
+                    &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('xlsx')">.excel</button>
+                    &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('csv')">.csv</button>
+                    &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('json')">.json</button>
+                    &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('txt')">.txt</button>
+                </div>
+            </div>
+          
+
+        
+            <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[2,5, 10, 25, 100]">
+            </mat-paginator>
+
+                <table mat-table matSort matTableExporter [dataSource]="dataSource" #exporter="matTableExporter" [hiddenColumns]="[0]" class="mat-elevation-z8">
+
+                    
+                    <ng-container matColumnDef="staff_id">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Staff ID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.staff_id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Task Ref. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="category">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> category </th>
+                        <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="priority">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> priority </th>
+                        <td mat-cell *matCellDef="let element"> {{element.priority}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="progress">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> progress </th>
+                        <td mat-cell *matCellDef="let element"> {{element.progress}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="req_date">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Request Date </th>
+                        <td mat-cell *matCellDef="let element"> {{element.req_date}} </td>
+                    </ng-container>
+
+
+
+                    <ng-container matColumnDef="assigned_date">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef>Date Assigned </th>
+                        <td mat-cell *matCellDef="let element"> {{element.assigned_date}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="completed_date">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef>Date Completed </th>
+                        <td mat-cell *matCellDef="let element"> {{element.completed_date}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="description">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> description </th>
+                        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="venue">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Venue </th>
+                        <td mat-cell *matCellDef="let element"> {{element.venue}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="staff_feedback">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Staff Feedback </th>
+                        <td mat-cell *matCellDef="let element"> {{element.staff_feedback}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="tech_feedback">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Tech Feedback </th>
+                        <td mat-cell *matCellDef="let element"> {{element.tech_feedback}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell mat-sort-header *matHeaderCellDef> Task Status </th>
+                        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                    </ng-container>
+                    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+        </div> -->
+
+    </div>
+    <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+    </footer> 
+</body>

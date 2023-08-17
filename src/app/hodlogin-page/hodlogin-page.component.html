@@ -1,0 +1,50 @@
+<div >
+    <div>
+        <div class="body">
+          <form
+          
+            method="POST"
+            class="w-543px h-383px rounded-1 p-4 border bg-white"
+            enctype="multipart/form-data">
+            <button id="b12" type="button" class="btn-close" (click)="close()" aria-label="Close"></button>
+            <br>
+          
+            <label class="d-block mb-4">
+              <span class="form-label d-block" class="row mx-0 justify-content-center">HOD Number</span>
+              <br>
+              <input
+              [(ngModel)]="HODlogin.hod_id" name="HODlogin.hod_id"
+                type="text"
+                class="form-control"
+                placeholder="Enter Number"
+              />
+            </label>
+  
+            <label class="d-block mb-4">
+              <span class="form-label d-block" class="row mx-0 justify-content-center">Password</span>
+              <br>
+              <input
+              [(ngModel)]="HODlogin.password" name="HODlogin.password"
+                type="text"
+                class="form-control"
+                placeholder="Enter Password"
+              />
+            </label>
+    
+            
+          
+    
+            <div class="mb-3 row mx-0 justify-content-center">
+              <button type="submit" class="btn btn-primary px-3 rounded-3" (click)="HOD_login()" >
+                Submit
+              </button>
+            </div>
+    
+            <div class="d-block text-end">
+              
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>

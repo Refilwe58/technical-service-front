@@ -1,0 +1,92 @@
+
+<div class="container-fluid">
+  <!-- <body class="container"> -->
+      <div class="log d-flex justify-content-end">
+          <nav class="header">
+              <div id="logoDiv">
+                  <a>
+                      <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                          style="float: left;height: 70px;width: 225px;" routerLink="read">
+                  </a>
+              </div>
+              <div id="menu-icon">
+                  <i class="fas fa-bars"></i>
+              </div>
+              <ul>
+                  <li>
+      
+                      <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                              class="btn btn-success">LOGOUT</button></a>
+                  </li>
+              </ul>
+      
+          </nav>
+      </div>
+</div>
+<body>
+
+  <div class="container2 d-flex justify-content-between ">
+      <div class="sideNav">
+          <nav class="breadcrumbNav">
+              <ul>
+                  <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="" disabled>View Logs</a></li>
+                  <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/hodprogress">View Progress</a></li>
+                  <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/hodcloselogs">Close Logs</a></li>   
+              </ul>
+          </nav>
+      </div>
+      <div class="tab-content ps-3 mt-5" id="myTabContent">
+
+
+          <div class="tab-pane fade show active" id="doing" role="tabpanel" aria-labelledby="doing-tab">
+
+              <div class="stats">
+            
+              </div>
+
+              <!-- class="ps-5 w-90 rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-8 px-lg-2 col-xl-11 px-xl-0 px-xxl-3" -->
+              <!-- <button type="button" class="btn btn-primary justify-content-center printReportBtn" (click)="export()" target="_blank">Export Report</button> -->
+              <div class="content card mt-4 p-4">
+
+                
+                  <h1 class="d-flex justify-content-center" style="background-color: rgb(182, 179, 179);">Hod View Logs</h1>
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Log Category</th>
+                    <th scope="col">Log Reference</th>
+                    <th scope="col">Log Progress</th>
+                    <th scope="col">Staff name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Log Date</th>
+                    <th scope="col">Log Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of readData">
+                        <td>{{ data.category }}</td>
+                        <td>{{ data.id }}</td>
+                        <td>{{ data.progress }}</td>
+                        <td>{{ data.staff_name }}</td>
+                        <td>{{ data.staff_surname }}</td>
+                        <td>{{ data.req_date }}</td>
+                        <td>{{ data.status }}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+
+              
+
+          </div>
+         
+
+
+
+      </div>
+
+  </div>
+  <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+  </footer> 
+</body>

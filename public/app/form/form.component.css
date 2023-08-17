@@ -1,0 +1,195 @@
+/* Staff */
+
+body{
+
+position: relative;
+width: 543px;
+height: 383px;
+
+background: #FFFFFF;
+border-radius: 10px;
+
+}
+
+#b12{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+/* body { padding: 2rem 0; } */
+/* h4 {
+    position: absolute;
+    top:115px;
+    left: 45%;
+ }
+ 
+ .img {
+    position: absolute;
+    height: 100px;
+    left: 0;
+    top: 45%;
+ }
+ 
+ .leftSidePolygon {
+    box-sizing: border-box;
+ 
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 92px;
+    top: 115px;
+ 
+    
+   
+ }
+ 
+ .imgLeftSidePolygon {
+    box-sizing: border-box;
+ 
+    position: absolute;
+    width: 410px;
+    height: 410px;
+    left: 220px;
+    top: 220px;
+ }
+ 
+  */
+ 
+ /*Background Image*/
+ 
+ /* body {
+ 
+    padding: 2rem 0;
+   
+ } */
+ 
+ 
+ /*font weight*/
+ /* .nav-link {
+ 
+    font-weight:bold;
+ } */
+ /*End of font weight*/
+ 
+ 
+    /*Navigation Tabs filter*/
+                /*Doing Tab*/
+        /* .red {
+            filter: invert(12%) sepia(90%) saturate(5773%) hue-rotate(1deg) brightness(106%) contrast(94%);
+ 
+            width: 50px;
+            height: 50px;
+        } */
+                /*End doing Tab*/
+ 
+                /*In-progress Tab*/
+        /* .amber {
+            filter: invert(54%) sepia(74%) saturate(1891%) hue-rotate(359deg) brightness(100%) contrast(102%); 
+            width: 50px;
+            height: 50px;
+        } */
+                /*End of in-progress Tab*/
+ 
+                /*Done Tab*/
+        /* .green {
+            filter: invert(41%) sepia(26%) saturate(1167%) hue-rotate(117deg) brightness(88%) contrast(80%);
+ 
+            width: 50px;
+            height: 50px;
+        } */
+        /*End of done Tab*/
+ 
+        /*Text color on Tabs*/
+                /* .colorRed {
+ 
+                    color: red;
+                }
+ 
+                .colorAmber {
+ 
+                    color: #FF8800;
+                }
+ 
+                .colorGreen {
+ 
+                    color: #00642D;
+                } */
+ 
+        /*End of Text color on Tabs*/
+ 
+    /*End of navigation Tabs filters*/
+ 
+ 
+ 
+ 
+ 
+ 

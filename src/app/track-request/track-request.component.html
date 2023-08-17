@@ -1,0 +1,124 @@
+ <!-- nav bar -->
+<div class="log d-flex justify-content-end">
+    <nav class="header">
+        <div id="logo-text">
+            <a>
+                <img src="../../../assets/images/tut.png" alt="SMART FARM"
+                    style="float: left;height: 72px;width: 225px;" routerLink="read">
+            </a>
+        </div>
+        <div id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+    <div class="d-flex justify-content-between">
+    
+    </div>
+         <!-- side nav bar -->
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+                    <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="anchorBorder" id="hover"
+                            routerLink="/staffpage"><b>REQUEST</b></a></li>
+                    </ul>
+                    <ul>
+                    <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="anchorBorder" id="hover"
+                            disabled="true"><b>TRACKING</b></a></li>
+                </ul>
+   
+                <ul>
+                    <li>
+        
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn-success">LOGOUT</button></a>
+                    </li>
+                </ul>
+    
+            </nav>
+        </div>
+
+        <!-- staff request  -->
+    <div class="contentContainerRight">
+        <div class="backFrom" >
+            <h2 class="toptitle">Staff Track Request</h2>
+        </div>
+
+        <!-- request stats -->
+        <div class="stats d-flex justify-content-left px-4">
+        <form>
+
+            <div class="w-100% rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-11 px-lg-2 col-xl-8 px-xl-0 px-xxl-3" >
+                <h1><b>Click on the tabs to view progress of your request(s)</b></h1>
+                <label for="zero" id="red" class="todo" (click)="recieveAllRequest()">Todo         {{unAssign}}</label>
+                <label for="zero" id="blue" class="Assigned" (click)="assignTask()">Assigned     {{assigned}}</label>
+                <label for="fifty" id="orange" class="InProgress" (click)="getInprogress()">InProgress      {{inprogress}}</label>
+                <label for="zero" id="gray" class="OnHold" (click)="getOnHoldTasks()">OnHold  {{hold}}</label>
+                <label for="hundred" id="green" class="Done" (click)="getCompleteTasks()">Done {{done}}</label>
+            </div>
+        </form>
+
+        <form>
+    
+            <div class="d-flex justify-content-center w-100 rounded-5 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-11 px-lg-2 col-xl-8 px-xl-0 px-xxl-3" style="width:100%">
+                <h1><b>REQUESTS</b></h1>
+                <!-- <div class="middleTableDivTextMargin" *ngFor="let request of allRequest">
+                    <p>Category: {{request.category}}</p>
+                    <p>Description: {{request.description}}</p>
+                    <p>Request Date: {{request.req_date}}</p>
+                    <p *ngIf="isPending == false">Expected to be fixed: {{request.expected_date}}</p>
+                    <p>Venue: {{request.venue}}</p>
+                    <button type="button" class="btn btn-secondary" *ngIf="numberDone > 0" (click)="feedback(request.id)">Feedback</button>
+                    <hr>
+                </div> -->
+                <table class="table table-dark" >
+                    <thead>
+                      <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Request Date</th>
+                        <!-- <th scope="col" >Expected to be fixed</th> -->
+                        <th scope="col">Venue</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr *ngFor="let request of allRequest">
+                        <th scope="row">{{request.category}}</th>
+                        <td>{{request.description}}</td>
+                        <td>{{request.req_date}}</td>
+                        <!-- <td >{{request.expected_date}}</td>  -->
+                        <td>{{request.venue}}</td>
+                        <button type="button" class="btn btn-secondary" *ngIf="numberDone > 0" (click)="feedback(request.id)">Feedback</button>
+                        <!-- <hr> -->
+                      </tr>
+                    
+                    </tbody>
+                    
+                  </table>
+
+
+            </div>
+
+        </form>
+    </div>
+    </div>
+
+   
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+</footer>

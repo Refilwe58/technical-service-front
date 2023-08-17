@@ -1,0 +1,181 @@
+<div class="topNav">
+    <!-- <body class="container"> -->
+        <div class="log d-flex justify-content-end">
+            <nav class="header">
+                <div id="logoDiv">
+                    <a>
+                        <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                            style="float: left;height: 70px;width: 225px;" routerLink="read">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <h4 class="admindashText" style="color: aliceblue;">Admin dashboard</h4>
+                <ul>
+                    <li>
+        
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn22" style="padding: 0 10px;">LOGOUT</button></a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+</div>
+
+<body>
+
+	<!-- for header part -->
+
+
+	<div class="main-container">
+		<div class=" sideNav">
+			<nav class="breadcrumbNav">
+				<ul>
+					<li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/adminpage">View Logs</a></li>
+					<!-- <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/adminprogress">View Progress</a></li>
+					<li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/admincloselog">Close Logs</a></li> -->
+					
+						<!-- <div class="dropdown">
+							<button class="dropbtn">Report</button>
+							<div class="dropdown-content" >
+							  <a class="nav-link active" id="ModalExample" (click)="downloadFile()">All Tasks</a>
+							  <a class="nav-link active" id="ModalExample">Active Tasks</a>
+							  <a class="nav-link active" id="ModalExample">Closed Tasks</a>
+							</div>
+						</div> -->
+						<!-- <div class="logstats"  *ngIf= "statsData">
+							<h3 class="averageTitle"  >Tasks Average</h3>
+							<label class="unassigned">Unassigned Tasks&nbsp;&nbsp;<span class="numberStats">{{statsData.totalUnassigned}}</span></label>
+							<label class="pendingTasks">Pending Tasks &nbsp;&nbsp;<span class="numberStats">{{statsData.averagePending}}%</span></label>
+							<label class="In-progressTasks">In-progress &nbsp;&nbsp;<span class="numberStats">{{statsData.averageInProgress}}%</span></label>
+		
+							<label class="completedTasks">Completed &nbsp;&nbsp;<span class="numberStats">{{statsData.averageInProgress}}%</span></label>
+							<label class="ClosedTasks">Closed &nbsp;&nbsp;<span class="numberStats">{{statsData.averageInProgress}}%</span></label>
+						</div> -->
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+
+	
+
+			<div class="box-container">
+
+				<div class="box box1">
+					<svg class ="svg" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" width="40px" height="64px"
+                                viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M26.3,22.7c-4.5,0-8.2,3.5-8.2,7.8v44.3c0,4.3,3.7,7.8,8.2,7.8h43.6c4.5,0,8.2-3.5,8.2-7.8V30.5 c0-4.3-3.7-7.8-8.2-7.8H26.3z M37.2,40.9c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V40.9z M67.2,40.9c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h19.1 c1.5,0,2.7,1.2,2.7,2.6V40.9z M37.2,54c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V54z M62.2,54c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h14.1 c1.5,0,2.7,1.2,2.7,2.6V54z M37.2,67c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V67z M67.2,67c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h19.1 c1.5,0,2.7,1.2,2.7,2.6V67z">
+                                    </path>
+                                </g>
+                    </svg>
+					<div class="text">
+						<h2 class="left" id="left" *ngFor="let totaltasksData of totaltasksData">logs Made<br><span class="numberStats" ><b>{{totaltasksData.total_requests}}</b></span></h2>
+					</div>
+				</div>
+
+				<div class="box box2">
+					<svg class="white" fill="#fffff" width="40px" height="64px" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M12 15C7.58 15 4 16.79 4 19V21H20V19C20 16.79 16.42 15 12 15ZM8 9C8 10.0609 8.42143 11.0783 9.17157 11.8284C9.92172 12.5786 10.9391 13 12 13C13.0609 13 14.0783 12.5786 14.8284 11.8284C15.5786 11.0783 16 10.0609 16 9H8ZM11.5 2C11.2 2 11 2.21 11 2.5V5.5H10V3C10 3 7.75 3.86 7.75 6.75C7.75 6.75 7 6.89 7 8H17C16.95 6.89 16.25 6.75 16.25 6.75C16.25 3.86 14 3 14 3V5.5H13V2.5C13 2.21 12.81 2 12.5 2H11.5Z">
+                                    </path>
+                                </g>
+                            </svg> 
+					<div class="text">
+						<h2 class="top-heading" *ngIf="totalInprogress">In-progress Logs<br><span class="numberStats"><b>{{totalInprogress.length}}</b></span></h2>
+					</div>
+				</div>
+
+				<div class="box box3">
+					<svg  class="white" width="40px" height="64px" viewBox="0 0 24 24" fill="#fffff"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 21C16.9706 21 21 16.9706 21 12C21 10.1666 20.4518 8.46124 19.5103 7.03891L12.355 14.9893C11.6624 15.7589 10.4968 15.8726 9.66844 15.2513L6.4 12.8C5.95817 12.4686 5.86863 11.8418 6.2 11.4C6.53137 10.9582 7.15817 10.8686 7.6 11.2L10.8684 13.6513L18.214 5.48955C16.5986 3.94717 14.4099 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                                    fill="#fffff"></path>
+                            </g>
+                        </svg>
+					<div class="text">
+						<h2 class="top-heading" *ngIf= "statsData">Completed Logs<br><span class="numberStats"><b>{{statsData.SoshanguveSouthComplete}}</b></span></h2>
+					</div>
+				</div>
+
+				<div class="box box4">
+					<svg class="white" fill="#fffff" xmlns="http://www.w3.org/2000/svg" width="40px" height="64px"
+					viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+					<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+					<g id="SVGRepo_iconCarrier">
+						<path
+							d="M26.3,22.7c-4.5,0-8.2,3.5-8.2,7.8v44.3c0,4.3,3.7,7.8,8.2,7.8h43.6c4.5,0,8.2-3.5,8.2-7.8V30.5 c0-4.3-3.7-7.8-8.2-7.8H26.3z M37.2,40.9c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V40.9z M67.2,40.9c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h19.1 c1.5,0,2.7,1.2,2.7,2.6V40.9z M37.2,54c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V54z M62.2,54c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h14.1 c1.5,0,2.7,1.2,2.7,2.6V54z M37.2,67c0,1.4-1.2,2.6-2.7,2.6h-2.7c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h2.7 c1.5,0,2.7,1.2,2.7,2.6V67z M67.2,67c0,1.4-1.2,2.6-2.7,2.6H45.4c-1.5,0-2.7-1.2-2.7-2.6v-2.6c0-1.4,1.2-2.6,2.7-2.6h19.1 c1.5,0,2.7,1.2,2.7,2.6V67z">
+						</path>
+					</g>
+					</svg>
+					<div class="text">
+						<h2 class="top-headingUnassigned" *ngIf= "statsData" >Unassigned Artisans<br><span class="numberStats"><b>{{statsData.totalUnassigned}}</b></span></h2>
+					</div>
+				</div>
+			</div>
+
+			<!--Bottom part/UNDER THE TICKETS  -->
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="Tasks-Categories">Tasks Averages</h1>
+				</div>
+				<div class="report-body" *ngIf="statsData" >
+					<div class="report-topic-heading">
+						<h3 class="t-op">Active</h3>
+						<h3 class="t-op">In-progress</h3>
+						<h3 class="t-op">Completed</h3>
+						<h3 class="t-op">Closed</h3>
+					</div>
+
+					<div class="items">
+						<div class="item1">
+							<h3 class="t-op-nextlvl">{{statsData.active}}%</h3>
+							<h3 class="t-op-nextlvl">{{statsData.averageInProgress}}%</h3>
+							<h3 class="t-op-nextlvl">{{statsData.averageCompleted}}%</h3>
+							<h3 class="t-op-nextlvl ">{{statsData.averageClosed}}%</h3>
+						</div>
+					</div>
+				</div>
+				
+				<div class="report-header">
+					<h1 class="Tasks-Categories">Tasks Categories</h1>
+				</div>
+				
+
+				<div class="report-body">
+					<div class="report-topic-heading">
+						<h3 class="t-op">Categories</h3>
+						<h3 class="t-op">Total</h3>
+						<!-- <h3 class="t-op">Comments</h3>
+						<h3 class="t-op">Status</h3> -->
+					</div>
+					<div class="items">
+						<div class="item1" *ngFor="let categories of taskCategories ">
+							<h3 class="t-op-nextlvl">{{categories.category}}</h3>
+							<h3 class="t-op-nextlvl">{{categories.total}}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--eND OF Bottom part/UNDER THE TICKETS  -->
+		</div>
+	</div>
+	<footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+	</footer>
+	
+</body>
+

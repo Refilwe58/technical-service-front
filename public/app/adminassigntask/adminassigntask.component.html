@@ -1,0 +1,118 @@
+<div class="">
+    <!-- <body class="container"> -->
+    <div class="log d-flex justify-content-end">
+        <nav class="header">
+            <div id="logoDiv">
+                <a>
+
+                    <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                        style="float: left;height: 70px;width: 225px;" routerLink="read">
+                </a>
+            </div>
+            <div id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li>
+
+                    <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                            class="btn btn-success">LOGOUT</button></a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</div>
+
+<body>
+
+    <div class="container2 d-flex justify-content-between ">
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+
+                    <li class="" id="breadcrumbpadding"><a class="" id="hover" routerLink="/adminpage">View Requests</a>
+                    </li>
+                    <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="" disabled>Assign Tasks</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="tab-content ps-3 mt-5" id="myTabContent">
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="message !=''">
+                <strong>{{message}}</strong>
+            </div>
+
+            <div class="contentForm">
+
+                <div class="departmenCategoryText">
+                    <h2>Campus: Soshanguve</h2>
+                    <h4></h4>
+                    <h5></h5>
+                </div>
+
+                <div class="content card mt-4 p-4">
+
+
+                    <h1 class="d-flex justify-content-center" style="background-color: rgb(182, 179, 179);">View
+                        Available Technician</h1>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Artisan Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tel Number</th>
+                                <th scope="col">Priority</th>
+                                <th scope="col">Assign Artisan</th>
+
+
+                            </tr>
+                        </thead>
+
+                        <tbody *ngFor="let availabletech of availableTechData">
+                            <tr>
+                                <td scope="row">{{availabletech.name}} {{availabletech.surname}} </td>
+                                <td scope="row">{{availabletech.email}}</td>
+                                
+                                <td>{{availabletech.phone}} </td>
+                                <td>
+                                    <select id="Cater" (change)="setDay($event)">
+                                        <option value="">Day</option>
+                                        <option *ngFor="let day of days" value="{{day}}">{{day}}</option>
+                                    </select>
+                                    <select id="Cater" (change)="setMonth($event)">
+                                        <option value="">Month</option>
+                                        <option *ngFor="let month of months" value="{{month}}">{{month}}</option>
+                                    </select>
+                                    <select id="Cater" (change)="setYear($event)">
+                                        <option value="">Year</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+
+                                    </select>
+                                </td>
+                                <td><button class="btnAvailableTech"
+                                        (click)="assignArtisan(availabletech.tech_id)">Assign</button></td>
+                                <td>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+    </footer>
+</body>

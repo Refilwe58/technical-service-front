@@ -1,0 +1,170 @@
+<div class="container-fluid">
+    <!-- <body class="container"> -->
+        <div class="log d-flex justify-content-end">
+            <nav class="header">
+                <div id="logoDiv">
+                    <a>
+                     
+                        <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                            style="float: left;height: 70px;width: 225px;" routerLink="read">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li>
+        
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn-success">LOGOUT</button></a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+  </div>
+  <body>
+  
+    <div class="container2 d-flex justify-content-between ">
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+                    
+                        <li class = "" id = "breadcrumbpadding"><a class ="" id="hover"  routerLink="/hodpage" >View Logs</a></li>
+                        <li class="breadcrumb-item active" id="breadcrumbpadding"><a class=""  disabled>View Progress</a></li>
+                        <li class = "" id = "breadcrumbpadding"><a class ="" id="hover"  routerLink="/hodcloselogs" >Close Logs</a></li>
+                        <!-- *ngIf= "statsData" statsData.totalUnassigned-->
+                        <div class="progressTotalsDiv"  >
+                          <div class="contentMargin">
+                            <label class="In-progressTasks"  *ngIf= "inprogressTasks">In-progress &nbsp;&nbsp;<span class="numbertotal">{{inprogressTasks.length}}</span></label><br>
+                            <label class="completedTasks" *ngIf= "completedTasks">completed &nbsp;&nbsp;<span class="numbertotal">{{completedTasks.length}}</span></label>
+                          </div>
+                      </div>
+                </ul>
+            </nav>
+        </div>
+  
+        <div class="tab-content  ps-3 mt-5" id="myTabContent">
+  
+                <div class = "contentForm" >
+                   
+                    <div class="departmenCategoryText">
+                        <h2></h2>
+                        <h4></h4>
+                        <h5></h5>
+                    </div>
+                    
+                    <div class="content  mt-4 p-4">
+  
+                
+                        <h1 class="d-flex justify-content-center" style="background-color: rgb(182, 179, 179);">Hod View Logs Progress</h1>
+  
+                        <div class = "contentForm">
+  
+                                <nav class="navtab">
+                                  <div class="nav nav-tabs progressBtns" id="nav-tab" role="tablist">
+                                    <button class="nav-link  active colorAmber" id="nav-in-progress-tab" data-bs-toggle="tab" data-bs-target="#nav-in-progress" type="button" role="tab" aria-controls="nav-in-progress" aria-selected="true">In-progress</button>
+                                    <button class="nav-link  colorRed" id="nav-done-tab" data-bs-toggle="tab" data-bs-target="#nav-done" type="button" role="tab" aria-controls="nav-done" aria-selected="false">Done</button>
+      
+                                  </div>
+                                </nav>
+                                <!--Container of bothe tab tables -->
+                                <div class="tab-content" id="nav-tabContent ">
+                                  <!--Start of In progress Task tab table content-->
+                                  <div class="tab-pane fade show active" id="nav-in-progress" role="tabpanel" aria-labelledby="nav-in-progress-tab">
+                                    <div class="left">
+                                      
+                                      <button class="printReportBtn" (click)="printer()" target="_blank">Print Report</button>
+                                      <div class="card  contentToPrint">
+                                          
+                                          <table class="table table-hover" id="">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Log Reference</th>
+                                                  <th scope="col">Staff Name</th>
+                                                  <th scope="col">Description</th>
+                                                 
+                                                  
+                                                  
+                                                </tr>
+                                              </thead>
+                                              <tbody >
+                                                <tr *ngFor ="let inprogress of inprogressTasks ">
+                                                  <th scope="row">{{inprogress.id}}</th>
+                                                  <td>{{inprogress.staff_name}}</td>
+                                                  <td>{{inprogress.description}}</td>
+                                                  
+                                                </tr>
+                                          
+                                               
+                                               
+                                              </tbody>
+                                            </table>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!--End of In progress Task tab table content-->
+
+                                  <!--Start of Completed Task tab table content-->
+                                  <div class="tab-pane fade" id="nav-done" role="tabpanel" aria-labelledby="nav-done-tab">
+                                    <div class="left">
+  
+                                      <button class="printReportBtn" (click)="printer()" target="_blank">Print Report</button>
+                                      <div class="card  contentToPrint">
+                                          
+                                          <table class="table table-hover" >
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">Log Reference</th>
+                                                  <th scope="col">Staff name</th>
+                                                  <th scope="col">Description</th>
+                                                  <th scope="col">LogDuration</th>
+
+                                                  
+                                                </tr>
+                                              </thead>
+                                              <tbody >
+                                                <tr scope="row" *ngFor ="let completed of completedTasks">
+                                                  <th >{{completed.id}}</th>
+                                                  <td>{{completed.staff_name}}</td>
+                                                  <td>{{completed.description}}</td>
+                                                  <td>{{completed.Duration}}</td>
+                                                </tr>
+                                            
+                                               
+                                               
+                                              </tbody>
+                                            </table>
+                                      </div>
+                                    </div>
+      
+      
+                                  </div>
+                                  <!--End of Completed Task tab table content-->
+                                 
+                              </div>
+                        </div>
+                                
+                    </div>
+    
+        
+                   
+                </div>
+         
+           
+           
+  
+  
+  
+        </div>
+  
+    </div>
+    <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+    </footer> 
+
+  
+  </body>
+  
+  
+

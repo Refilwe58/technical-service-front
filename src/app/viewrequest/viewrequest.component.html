@@ -1,0 +1,218 @@
+<div class="container-fluid">
+    <!-- <body class="container"> -->
+<div class="log d-flex justify-content-end">
+    <NAv>
+        <div id="logo-text">
+            <a href="#">
+                <img src="../../../assets/images/tut.png" alt="SMART FARM"
+                    style="float: left;height: 72px;width: 225px;">
+            </a>
+        </div>
+        <div id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li>
+                <a href = "#" (click)="logout()" class="nav-link active" id="ModalExample" ><button type="button" class="btn btn-success"  >LOGOUT</button></a>
+              </li>
+            </ul>
+    </NAv>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container2 d-flex justify-content-between ">
+    <ul class="nav nav-tabs flex-column justify-content-center" id="myTab" role="tablist">
+
+        <li>
+            <img src=".../../../../assets/images/download.png" alt="">
+        </li>
+        <li class="nav-item" role="presentation" id="doing-tab1">
+            <button class="nav-link active colorRed" id="doing-tab" data-bs-toggle="tab" data-bs-target="#doing"
+                type="button" role="tab" aria-controls="doing" aria-selected="true">
+                <br><a>View Requests</a></button>
+        </li>
+        <li class="nav-item" role="presentation" id="doing-tab2">
+            <button class="nav-link colorAmber" id="in-progress-tab" data-bs-toggle="tab" data-bs-target="#in-progress"
+                type="button" role="tab" aria-controls="in-progress" aria-selected="false"><br><a>View Progress</a></button>
+
+        </li>
+        <li class="nav-item" role="presentation" id="doing-tab3">
+            <button class="nav-link colorGreen" id="done-tab" data-bs-toggle="tab" data-bs-target="#done" type="button"
+                role="tab" aria-controls="done" aria-selected="false"><br><a>Feedback</a></button>
+        </li>
+    </ul>
+    <div class="tab-content ps-3 mt-4" id="myTabContent">
+
+        
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        <div class="tab-pane fade" id="in-progress" role="tabpanel" aria-labelledby="in-progress-tab">
+
+
+            <div class="row" id="tabContentPar">
+                <div class="column">
+                    <img src="../../assets/images/todolist.png" alt="Snow" style="width:30%">
+                </div>
+                <div class="column">
+                    <img src="../../assets/images/inProgress.png" alt="Forest" style="width:30%">
+                </div>
+                <div class="column">
+                    <img src="../../assets/images/LikeHand.png" alt="Mountains" style="width:30%">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="done" role="tabpanel" aria-labelledby="done-tab">
+            <br>
+            <div class="row" id="tabContentPar">
+                <div id="done" role="tabpanel" aria-labelledby="done-tab">
+
+
+                    <div>
+
+                        <form method="POST"
+                            class="w-99 rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-8 px-lg-2 col-xl-8 px-xl-0 px-xxl-3"
+                            action="#" enctype="multipart/form-data">
+                            <div class="reqhead2">
+                                <h1>Staff Feedback</h1>
+                            </div>
+
+                            <br>
+                            <br>
+                            <br>
+                            <label class="d-block mb-4">
+                                <span class="form-label d-block">
+                                    <h2>
+                                        <p>Thank you for taking your your time and give us feedback on the job we did
+                                            for you.</p> We promise to read your comments carefully. Hopefully we
+                                        managed to solve your issues.
+                                    </h2>
+                                </span>
+
+                            </label>
+
+                            <label class="d-block mb-2">
+                                <span class="form-label d-block">
+                                    <h1>Finished?</h1>
+                                </span>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                        value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                </div>
+                            </label>
+
+                            <label class="d-block mb-0">
+                                <span class="form-label d-block">
+                                    <h1>Description</h1>
+                                </span>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Please describe your problem"></textarea>
+                            </label>
+
+
+                            <div class="mb-3">
+                                <br>
+                                <br>
+                                <button type="submit" class="btn btn-primary px-3 rounded-3">
+                                    Submit
+                                </button>
+                            </div>
+
+                            <div class="d-block text-end">
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+</div>
+
+
+<footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+</footer>

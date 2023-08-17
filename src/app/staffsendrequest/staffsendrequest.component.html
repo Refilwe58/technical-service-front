@@ -1,0 +1,135 @@
+
+<div class="container-fluid">
+    <!-- <body class="container"> -->
+        <!-- nav bar -->
+        <div class="log d-flex justify-content-end">
+            <nav class="header">
+                <div id="logoDiv">
+                    <a>
+                        <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                            style="float: left;height: 70px;width: 225px;" routerLink="read">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li>
+       
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn-success">LOGOUT</button></a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+</div>
+
+
+<body>
+
+    <div class="container2 d-flex justify-content-between ">
+       
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+                    <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="" disabled>Send Request</a></li>
+                    <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/trackrequest">Track Request</a></li>  
+                </ul>
+            </nav>
+        </div>
+
+        <div class="tab-content ps-5" id="myTabContent">
+            <div class="tab-pane fade show active" id="formContent" role="tabpanel" aria-labelledby="doing-tab">
+    
+                <div class="table">
+    
+    
+                    <form method="POST"
+                        class="w-100 rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-11 px-lg-2 col-xl-8 px-xl-0 px-xxl-3"
+                        enctype="multipart/form-data">
+                        <div class="reqhead1">SEND REQUEST</div>
+                        <div *ngIf="showSuccessMsg" class="alert alert-success" role="alert">
+                            <strong>{{successmsg}}</strong>
+                            <button id="b12" type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
+    
+                        <label class="d-block mb-4" >
+                            <br>
+                            <span class="form-label d-block">
+                                <h4 style="font-weight:500">Description</h4>
+                            </span>
+                            <textarea class="form-control" rows="3" [(ngModel)]="requestform.description"
+                                name="requestform.description" placeholder="Please describe your problem"></textarea>
+                        </label>
+    
+                        <label class="Cater" for="Cater">
+    
+                            <h4 style="font-weight:500">Catergory</h4>
+    
+                            <select style="padding: 5px;" id="Cater" [(ngModel)]="requestform.category" name="requestform.category" >
+                                <option value="#">Select Catergory</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Hardware">Software</option>
+                                <option value="Hardware">Electrical</option>
+                            </select>
+                            
+                        </label>
+    
+    
+                        <div class="form-group">
+                            <br>
+                            <select (change)="buldingNoSelect($event)" class="form-control mb-2 mr-sm-2">
+                                <option value="" >Select Building Number</option>
+                                <option *ngFor="let bld of bld_no" value="{{bld}}">{{bld}}</option>
+                            </select>
+                            <br>
+                            <select (change)="getVunueSelected($event)" class="form-control mb-2 mr-sm-2">
+                                <option value="#" >---Select Vanue---</option>
+                                <option *ngFor="let vanue of selectedBuilding" value="{{vanue.v}}">{{vanue.v}}</option>
+                            </select>
+                        </div>
+    
+    
+    
+                        <label for="formFileDisabled" class="form-label input-group"><span>
+                                <h4 style="font-weight:500;">Image</h4>
+                            </span>
+    
+                            <input style="padding: 8px;" class="form-control" [(ngModel)]="requestform.Image" name="requestform.Image" type="file"
+                                id="formFileDisabled" />
+                        </label>
+    
+                        <label class="d-block mb-4 invisible">
+                            <span class="form-label d-block">
+                                <h4>Staff Number</h4>
+                            </span>
+                            <input type="text" class="form-control" placeholder="235578933"
+                                [(ngModel)]="requestform.staff_id" name="requestform.staff_id" name="requestform.venue"
+                                readonly />
+                        </label>
+    
+                        <div class="mb-3">
+                            <button type="submit" (click)="clear()" (click)="request()"
+                                class="btnSubmit  px-3 rounded-3">
+                                Submit
+                            </button>
+                        </div>
+    
+                        <div class="d-block text-end">
+    
+                        </div>
+    
+    
+                    </form>
+    
+    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+    </footer> 
+</body>

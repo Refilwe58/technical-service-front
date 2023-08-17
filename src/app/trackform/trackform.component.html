@@ -1,0 +1,98 @@
+
+
+
+
+
+<div class="container mt-4 mb-4 shadow-lg p-3 mb-5 bg-blue rounded">
+    <div class="row mx-0 justify-content-center">
+      <div class="col-md-8 col-lg-8 px-lg-2 col-xl-8 px-xl-0 px-xxl-3">
+        <form
+          method="POST"
+          class="w-100 rounded-1 p-4 border bg-white"
+          action="#"
+          enctype="multipart/form-data"
+        >
+        <p class="backcolor">Track Your Request</p>
+        <div class="">
+
+            <ul class="nav nav-tabs justify-content-center   " style="border-bottom:0px" id="myTab" role="tablist">
+                <li class="nav-item  " role="presentation" id="doing-tab1">
+                    <button class="nav-link active  colorRed" id="doing-tab" data-bs-toggle="tab"
+                        data-bs-target="#doing" type="button" role="tab" aria-controls="doing"
+                        aria-selected="true"><img class="red" src="assets/images/todolist.png"><br>To-do</button>
+                </li>
+                <li class="nav-item  " role="presentation" id="doing-tab2">
+                    <button class="nav-link colorAmber " id="in-progress-tab" data-bs-toggle="tab"
+                        data-bs-target="#in-progress" type="button" role="tab" aria-controls="in-progress"
+                        aria-selected="false"><img class="amber"
+                            src="assets/images/inProgress.png"><br>Preceeding</button>
+                            
+                </li>
+                <li class="nav-item  " role="presentation" id="doing-tab3">
+                    <button class="nav-link colorGreen" id="done-tab" data-bs-toggle="tab" data-bs-target="#done"
+                        type="button" role="tab" aria-controls="done" aria-selected="false"><img class="green"
+                            src="assets/images/LikeHand.png"><br>Done</button>
+                </li>
+            </ul>
+            <div class="tab-content " id="myTabContent">
+                <div class="tab-pane fade show active " id="doing" role="tabpanel" aria-labelledby="doing-tab">
+                    <br>
+                    <div>
+                        <input class="form-control" type="text">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Fullname</th>
+                            <th scope="col">email</th>
+                            <th scope="col">title</th>
+                            <th scope="col">status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor = "let us of readData ">
+                            <th scope="row">{{us.id}}</th>
+                            <td>{{us.fullname}}</td>
+                            <td>{{us.email}}</td>
+                            <td>{{us.title}}</td>
+                            <td>status</td>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    
+                    
+                </div>
+                <div class="tab-pane fade" id="in-progress" role="tabpanel" aria-labelledby="in-progress-tab">
+                    <br>
+                    <p id="tabContentPar">Navigation available in Bootstrap share general markup and styles, from
+                        the base .nav class to the active and disabled states. Swap modifier classes to switch
+                        between each style.
+
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="done" role="tabpanel" aria-labelledby="done-tab">
+                    <br>
+                    <p id="tabContentPar">Navigation available in Bootstrap share general markup and styles, from
+                        the base .nav class to the active and disabled states. Swap modifier classes to switch
+                        between each style.
+
+                    </p>
+                </div>
+
+
+                
+            </div>
+
+
+            
+        </div>
+        
+        </form>
+        <br>
+        <div><button mat-button class="btn btn-success" (click)="close()" mat-dialog-close>Close</button>
+        </div>
+      </div>
+    </div>

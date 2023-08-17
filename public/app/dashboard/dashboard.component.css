@@ -1,0 +1,532 @@
+/* Main CSS Here */
+
+@import url(
+"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ /* Start of the navigation bar*/
+ .header {
+  height: 82px;
+  background: #0c0c0c;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding:0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.header a {
+  padding: 0 32px;
+  color: #eee;
+  transition: 0.4s;
+}
+.header a:hover {
+  text-decoration: none;
+  color: red;
+}
+.header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+#logoDiv{
+
+  margin-left: 0.35%;
+  margin-top: 7.2px;
+
+}
+.admindashText{
+  color: white;
+  font-weight: 500;
+  margin-top: 1.6%;
+  margin-right: 25%;
+}
+/*logout button*/
+.btn22{
+  color: white;
+  border: 2px solid white;
+  height: 40px;
+  background-color: #005596;
+}
+.btn22:active{
+  border: white;
+  background-color: #005596;
+}
+/* End of the navigation bar*/
+/* Start of  Everything on the side nav*/
+.sideNav {
+  float: left;
+ 
+  box-shadow: 5px 0 2px #969292;
+  width: 410px;
+  height: 1200px;
+  
+}
+.breadcrumbNav {
+  
+  margin: 12.8% 10px;
+  padding: 20px 30px;      
+}
+#breadcrumbpadding {
+
+  width: 120px;  
+  padding: 6px 0;
+}
+a {
+  padding-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  letter-spacing: 0.035em;
+  text-transform: capitalize;
+  color: #005596;
+  text-decoration: none;
+}
+.breadcrumbNav ul {
+  list-style:none ;
+  flex-direction: column;
+}
+.breadcrumb-item.active {
+  border-bottom: 3px solid #005596;
+  width: 115px;  
+}
+
+
+.dropdown {
+  margin: 50% auto;
+  display: inline-block;
+  cursor:pointer;
+
+}
+.dropbtn{
+  width: 100px;
+  padding: 5px;
+  border-radius: 8px;
+  color:white;
+  border: 1px solid white;
+  background-color: #005596;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin: 2px; 
+  border-radius: 8px;
+  color:white;
+  border: 1px solid white;
+  background-color: #005596;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid white;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: white;color:#005596 ;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {border:2px solid black;font-weight: 500;}
+
+
+
+
+
+
+
+.main-container {
+display: flex;
+width: 100vw;
+position: relative;
+top: 70px;
+/* z-index: 1; */
+}
+.dpicn {
+height: 42px;
+}
+
+.main {
+height: calc(100vh - 70px);
+width: 100%;
+padding: 40px 30px 30px 30px;
+}
+
+.white {
+  fill: white;
+}
+
+.box-container {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+gap: 50px;
+}
+
+.navcontainer {
+height: calc(100vh - 70px);
+width: 250px;
+position: relative;
+overflow-y: scroll;
+overflow-x: hidden;
+transition: all 0.5s ease-in-out;
+}
+.navcontainer::-webkit-scrollbar {
+display: none;
+}
+.navclose {
+width: 80px;
+}
+.nav-option {
+width: 250px;
+height: 60px;
+display: flex;
+align-items: center;
+padding: 0 30px 0 20px;
+gap: 20px;
+transition: all 0.1s ease-in-out;
+}
+.nav-option:hover {
+border-left: 5px solid #a2a2a2;
+background-color: #dadada;
+cursor: pointer;
+}
+.nav-img {
+height: 30px;
+}
+
+.nav-upper-options {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+}
+
+.option1 {
+border-left: 5px solid #010058af;
+background-color: var(--Border-color);
+color: white;
+cursor: pointer;
+}
+.option1:hover {
+border-left: 5px solid #010058af;
+background-color: var(--Border-color);
+}
+.box {
+background-color: #005596;
+height: 150px;
+width: 280px;
+border-radius: 20px;
+box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+cursor: pointer;
+transition: transform 0.3s ease-in-out;
+}
+.box:hover {
+transform: scale(1.08);
+}
+
+
+
+.box img {
+height: 50px;
+}
+.box .text {
+color: white;
+}
+
+#left{
+  margin-top: 58%;
+  margin-left: -35%;
+}
+.top-heading {
+font-size: 20px;
+ margin-top: 35%;
+ margin-left: -15px;
+
+}
+.top-headingUnassigned{
+
+  margin-top: 30%;
+ margin-left: -10px;
+}
+
+.report-container {
+
+min-height: 300px;
+max-width: 1200px;
+margin: 70px auto 0px auto;
+background-color: #ffffff;
+border-radius: 30px;
+box-shadow: 3px 3px 10px rgb(188, 188, 188);
+padding: 0px 20px 20px 20px;
+}
+.report-header {
+height: 80px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 20px 10px 20px;
+border-bottom: 2px solid #005596;
+}
+
+.Tasks-Categories {
+font-size: 30px;
+font-weight: 600;
+
+color: #005596;
+
+}
+
+.view {
+height: 35px;
+width: 90px;
+border-radius: 8px;
+
+background-color: #005596;
+
+color: white;
+font-size: 15px;
+border: none;
+cursor: pointer;
+}
+
+.report-body {
+max-width: 1160px;
+overflow-x: auto;
+padding: 20px;
+}
+.report-topic-heading,
+.item1 {
+width: 1120px;
+display: flex;
+justify-content: space-evenly;
+}
+.t-op {
+font-size: 18px;
+letter-spacing: 0px;
+}
+
+.items {
+width: 1120px;
+margin-top: 15px;
+}
+
+.item1 {
+margin-top: 20px;
+}
+.t-op-nextlvl {
+
+font-size: 14px;
+letter-spacing: 0px;
+font-weight: 600;
+}
+
+.label-tag {
+width: 100px;
+text-align: center;
+background-color: rgb(0, 177, 0);
+color: white;
+border-radius: 4px;
+}
+footer{
+  background: black;
+  padding: 8px;
+  color: #eee;
+  text-align: center;
+  margin-left: 0%;
+  margin-top: 3.75%;
+  width: 100%;
+  height: 40px;
+  /* position: absolute; */
+  /* bottom: 0;
+  width: 100%; */
+}
+
+
+
+
+
+
+
+/* Responsive CSS Here */
+@media screen and (max-width: 950px) {
+  .nav-img {
+    height: 25px;
+  }
+  .nav-option {
+    gap: 30px;
+  }
+  .nav-option h3 {
+    font-size: 15px;
+  }
+  .report-topic-heading,
+  .item1,
+  .items {
+    width: 800px;
+  }
+  }
+  
+  @media screen and (max-width: 850px) {
+  .nav-img {
+    height: 30px;
+  }
+  .nav-option {
+    gap: 30px;
+  }
+  .nav-option h3 {
+    font-size: 20px;
+  }
+  .report-topic-heading,
+  .item1,
+  .items {
+    width: 700px;
+  }
+  .navcontainer {
+    width: 100vw;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+    top: 0;
+    left: -100vw;
+  }
+  .nav {
+    width: 100%;
+    position: absolute;
+  }
+  .navclose {
+    left: 00px;
+  }
+  .searchbar {
+    display: none;
+  }
+  .main {
+    padding: 40px 30px 30px 30px;
+  }
+  .searchbar2 {
+    width: 100%;
+    display: flex;
+    margin: 0 0 40px 0;
+    justify-content: center;
+  }
+  .searchbar2 input {
+    width: 250px;
+    height: 42px;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--background-color3);
+    padding: 0 20px;
+    font-size: 15px;
+    border: 2px solid var(--secondary-color);
+  }
+  }
+  
+  @media screen and (max-width: 490px) {
+  .message {
+    display: none;
+  }
+  .logosec {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .menuicn {
+    height: 25px;
+  }
+  .nav-img {
+    height: 25px;
+  }
+  .nav-option {
+    gap: 25px;
+  }
+  .nav-option h3 {
+    font-size: 12px;
+  }
+  .nav-upper-options {
+    gap: 15px;
+  }
+  .recent-Articles {
+    font-size: 20px;
+  }
+  .report-topic-heading,
+  .item1,
+  .items {
+    width: 550px;
+  }
+  }
+  
+  @media screen and (max-width: 400px) {
+  .recent-Articles {
+    font-size: 17px;
+  }
+  .view {
+    width: 60px;
+    font-size: 10px;
+    height: 27px;
+  }
+  .report-header {
+    height: 60px;
+    padding: 10px 10px 5px 10px;
+  }
+  .searchbtn img {
+    height: 20px;
+  }
+  }
+  
+  @media screen and (max-width: 320px) {
+  .recent-Articles {
+    font-size: 12px;
+  }
+  .view {
+    width: 50px;
+    font-size: 8px;
+    height: 27px;
+  }
+  .report-header {
+    height: 60px;
+    padding: 10px 5px 5px 5px;
+  }
+  .t-op {
+    font-size: 12px;
+  }
+  .t-op-nextlvl {
+    font-size: 10px;
+  }
+  .report-topic-heading,
+  .item1,
+  .items {
+    width: 300px;
+  }
+  .report-body {
+    padding: 10px;
+  }
+  .label-tag {
+    width: 70px;
+  }
+  .searchbtn {
+    width: 40px;
+  }
+  .searchbar2 input {
+    width: 180px;
+  }
+  }
+  

@@ -1,0 +1,119 @@
+<div class="topNav">
+    <!-- <body class="container"> -->
+        <div class="log d-flex justify-content-end">
+            <nav class="header">
+                <div id="logoDiv">
+                    <a>
+                        <img class="logo" src="../../../assets/images/tut.png" alt="SMART FARM"
+                            style="float: left;height: 70px;width: 225px;" routerLink="read">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li>
+        
+                        <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
+                                class="btn btn-success">LOGOUT</button></a>
+                    </li>
+                </ul>
+        
+            </nav>
+        </div>
+</div>
+
+
+<body>
+
+    <div class="container2 d-flex justify-content-between ">
+        <div class="sideNav">
+            <nav class="breadcrumbNav">
+                <ul>
+                    <li class="breadcrumb-item active" id="breadcrumbpadding"><a class="" disabled>View Logs</a></li>
+                    <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/adminprogress">View Progress</a></li>
+                    <li class = "" id = "breadcrumbpadding"><a class ="" id="hover" href="#"   routerLink="/admincloselog">Close Logs</a></li>
+                    
+                        
+                        
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-content ps-5 " id="myTabContent">
+            <div class="tab-pane fade show active" id="doing" role="tabpanel" aria-labelledby="doing-tab">
+
+                <div class="stats">
+              
+                </div>
+
+                <!-- class="ps-5 w-90 rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-8 px-lg-2 col-xl-11 px-xl-0 px-xxl-3" -->
+                <!-- <button type="button" class="btn btn-primary justify-content-center printReportBtn" (click)="export()" target="_blank">Export Report</button> -->
+                <div class="content  mt-4 p-4">
+                    <h1 class="reqhead1 d-flex justify-content-center">Staff Feedback</h1>
+
+                    <div class="down">
+                        <div *ngIf="showSuccessMsg down" class="alert alert-success" role="alert">
+                            <strong>{{successmsg}}</strong>
+                            <button id="b12" type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close" routerLink="/trackrequest"></button>
+                        </div>
+        
+                        <div class="feedbackTopPara">
+                            <p class="">Thank you for taking your your time and give us feedback on the job we did for you.
+                                We promise to read your comments carefully. Hopefully we managed to solve your issues.</p>
+                        </div>
+        
+        
+                        <form #feedback="ngForm">
+                            <div class="radionBtn">
+                                <form></form>
+                                <div>
+                                    <h5>Completed:</h5>
+                                </div>
+                                <div class="form-check form-check-inline">
+        
+                                    <input class="form-check-input" type="radio" name="staff_feedback" id="inlineRadio1"
+                                        value="No, it is not resolved" [(ngModel)]="staff_feedback">
+                                    <label class="form-check-label" for="inlineRadio1">No, it is not resolved</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="staff_feedback" id="inlineRadio2"
+                                        value="Yes, it has been resolved" [(ngModel)]="staff_feedback">
+                                    <label class="form-check-label" for="inlineRadio2">Yes, it has been resolved</label>
+                                </div>
+        
+                            </div>
+        
+                            <div class="descriptionTextarea">
+        
+                                <!-- <h3 class="descriptionTitle">Give your description below</h3>
+                                <textarea id="description" rows="8" name="description"
+                                    placeholder="Enter the description of the feedback">
+        
+                                            </textarea> -->
+                                <div class="btn-submit">
+                                    <button (click)="sendFeedBack()">Send</button>
+                                </div>
+        
+                            </div>
+        
+                        </form>
+
+                    </div>
+                   
+                         
+                </div>
+
+                
+
+            </div>
+           
+
+
+
+        </div>
+
+    </div>
+    <footer>&copy; 2023 Informatics Community Engagement Project . All Rights Reserved <p></p>
+    </footer> 
+</body>

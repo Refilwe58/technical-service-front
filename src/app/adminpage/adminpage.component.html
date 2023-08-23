@@ -16,7 +16,7 @@
                     <li>
         
                         <a href="#" class="nav-link active" id="ModalExample" (click)="logout()"><button type="button"
-                                class="btn btn-success">LOGOUT</button></a>
+                            class="dropbtn">LOGOUT</button></a>
                     </li>
                 </ul>
         
@@ -24,7 +24,7 @@
         </div>
 </div>
 <body>
-
+ <!-- side nav -->
     <div class="container2 d-flex justify-content-between ">
         <div class="sideNav">
             <nav class="breadcrumbNav">
@@ -49,8 +49,6 @@
               
                 </div>
 
-                <!-- class="ps-5 w-90 rounded-1 p-4 border bg-white  mt-4 mb-4 shadow-lg p-3 mb-5 bg-white rounded row mx-0 justify-content-center col-md-8 col-lg-8 px-lg-2 col-xl-11 px-xl-0 px-xxl-3" -->
-                <!-- <button type="button" class="btn btn-primary justify-content-center printReportBtn" (click)="export()" target="_blank">Export Report</button> -->
                 <div class="content card ">
 
                   
@@ -75,17 +73,7 @@
                                     <th scope="row">{{me.staff_id}}</th>
                                     <td>{{me.description}}</td>
                                     <td>{{me.venue}}</td>
-                                   <!-- <td>
-                                        <input type="text" placeholder="Day">
-                                        <input type="text"  placeholder="Month">
-                                        <input type="text"  placeholder="Year">
-
-                                         <select id="Cater" (change)="priority($event, me.id)" [(ngModel)]="me.priority"  >
-                                        <option value="High">High</option>
-                                        <option value="Low">Low</option>
-                                        <option value="Medium">Medium</option> 
-                                    </select>
-                                </td>-->
+                                  
                                     <td>{{me.progress}}</td>
                                     <td>{{me.req_date}}</td>
                                     <td><button type="button" class="btnAvailableTech" (click)=viewAvailableTech(me.id)><p>Artisan</p></button></td>

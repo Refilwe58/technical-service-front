@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
+
+declare var window:any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -17,14 +20,37 @@ export class DashboardComponent implements OnInit {
   totalClosed: any;
   totalartisan: any;
   statsData: any;
+  formModal:any;
 
-  constructor(private service: ApiserviceService) { }
+  constructor(private service: ApiserviceService,public dialog: MatDialog) { 
+   
+    this.service.popupEvent.subscribe(() => {
+      this.formModal.show();
+      this.showPopup();
+    });
+  }
+  
+  
+  
+
+  showPopup() {
+    // Logic to show the popup in ComponentB
+    // 
+    console.log("pop");
+    this.formModal.show();
+ 
+  }
   ngOnInit(): void {
     this.service.allRequests().subscribe((res) => {
       console.log(res.result, "Active tasks/pending before setting priority");
       this.readData = res.result;
 
+      
 
+      this.formModal=new window.bootstrap.Modal(
+        document.getElementById("adminPop")
+       );
+      
 
     })
 
@@ -46,7 +72,17 @@ export class DashboardComponent implements OnInit {
     this.getclosedlogs()
     // Logs statistics
     this.getStats();
+
+   
   }
+  openAdminModal(){
+    this.formModal.show();
+  }
+  closeAdminModal(){
+    ///close modal
+    this.formModal.hide();
+  }
+  
 
 
 

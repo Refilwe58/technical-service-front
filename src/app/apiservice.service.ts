@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 
+declare var window:any;
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +17,31 @@ export class ApiserviceService {
    apiUrl  = 'http://localhost:3000';
  // apiUrl = "http://192.168.27.20:3000"
   //get all data
+  formModal:any;
+  popupEvent: EventEmitter<void> = new EventEmitter<void>();
+
+  triggerPopup() {
+    this.popupEvent.emit();
+  }
+
+ 
+  ////pop functions
+ adminModal(): Observable<any>{///create an instance of the modal
+  this.formModal=new window.bootstrap.Modal(
+    document.getElementById("exampleModalCenter")
+   );
+  
+    return this.formModal.show();
+  
+ }
+
+ ////open modal
+
+adminClose(): Observable<any>{
+  ///close modal
+  return this.formModal.hide();
+}
+   
 
   staffLogin(data: any) {
     return this._http.post(this.apiUrl + "/staff/authenticateStaffNumber", data);
